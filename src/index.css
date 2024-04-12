@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background: rgb(15, 15, 15);
+  color: antiquewhite;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.videos {
+  width: 100%;
+  display: grid;
+  gap: 50px;
+  height: 100vh;
+  overflow: auto;
+  grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
+  justify-content: center;
+  padding: 20px;
+}
+
+.videos::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+}
+
+.videos::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+.detail-page {
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+@media (max-width: 1000px) {
+  .detail-page {
+    grid-template-columns: 1fr;
+  }
+
+  .channel-review {
+    display: none;
+  }
+  .search-line {
+    width: 100px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.row .c-pic {
+  display: none;
+}
+
+.row .v-pic {
+  width: 145px;
+}
+
+.row .detail p:nth-of-type(1) span:nth-of-type(2) {
+  display: none;
+}
